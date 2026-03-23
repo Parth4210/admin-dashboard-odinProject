@@ -51,6 +51,7 @@ html, body {
     height: 20px;
     width: auto;
     filter: invert(100%);
+    cursor: pointer;
 }
 
 .sidebarBox{
@@ -137,10 +138,70 @@ html, body {
     font-weight: 500;
 }
 
-.main > *{
-    border: 2px solid black;
-}
 
 .main{
+    display: grid;
+    grid-template-columns: 3fr 1.3fr;
+}
 
+.main > .left{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.main > .right{
+ grid-column: 2/3;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 40px;
+}
+
+.card .icons img{
+    filter: invert(0%);
+    position: absolute;
+}
+
+.card{
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+    padding: 20px;
+    border-left: 10px solid #F0B429;
+}
+
+.card .title{
+    font-weight: 700;
+}
+
+.card .description{
+    font-size: 13px;
+    color: #848484;
+}
+
+.star{
+    bottom: 16px;
+    left: 230px;
+}
+
+.eyePlus{
+    bottom: 16px;
+    left: 260px;
+}
+
+.share{
+    bottom: 16px;
+    left: 290px;
 }
