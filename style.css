@@ -151,18 +151,14 @@ html, body {
     gap: 10px;
     margin-top: 20px;
     margin-left: 20px;
-
-}
-
-.main > .right{
- grid-column: 2/3;
+    margin-bottom: 20px;
 }
 
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: repeat(3, 200px);
-    gap: 40px;
+    grid-template-columns: repeat(2, 360px);
+    grid-template-rows: repeat(3, 230px);
+    gap: 20px;
 }
 
 .card .icons img{
@@ -204,4 +200,76 @@ html, body {
 .share{
     bottom: 16px;
     left: 290px;
+}
+
+.main > .right{
+ grid-column: 2/3;
+ display: flex;
+ flex-direction: column;
+ gap: 40px;
+ margin-top: 20px;
+ margin-right: 70px;
+}
+
+.main > .right > .top{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.annoucementCard{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.annoucementCard .innerDataCard:nth-child(1), .annoucementCard .innerDataCard:nth-child(2){
+    border-bottom: 1px solid grey;
+}
+
+.innerDataCard{
+    padding: 15px;
+}
+
+.innerDataCard > .title{
+    font-weight: 700;
+}
+
+.innerDataCard > .description{
+    color: #848484;
+    font-size: 15px;
+}
+
+.right .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .bottom > .trendingCard{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profileData{
+    display: flex;
+    gap: 20px;
+}
+
+.profileData .userName{
+    font-weight: 500;
+}
+
+.profileData .placeHolder{
+    color: #636363;
+    font-size: 15px;
 }
